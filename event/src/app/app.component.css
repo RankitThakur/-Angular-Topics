@@ -1,0 +1,19 @@
+.btn{
+
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+
+.myClass{
+  text-align: center;
+  background: pink;
+  margin-top: 2rem
+
+}
