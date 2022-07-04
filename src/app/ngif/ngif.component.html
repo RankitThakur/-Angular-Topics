@@ -1,0 +1,8 @@
+<p>ngif works!</p>
+<button (click) = "showFun()">show</button>
+<p *ngIf="showFun2; else elseshow" >hello boy............</p>
+
+	<ng-template #elseshow>
+		<p>click a btn</p>
+	</ng-template>
+
