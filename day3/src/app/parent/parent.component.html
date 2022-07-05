@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1 class="card">By PRODUCT</h1>
+  <div class = "center" *ngIf = "!select">
+    <h1>select product: {{productValue}}</h1>
+    <button class="card" >checkOut</button>
+  </div>
+  <div class = connt>
+    <div class="card">
+      <p>laptop</p>
+      <p class="laptop">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <button (click)="onSeclect('laptop')" class= "btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <p>Mobile</p>
+      <p class="price">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <button (click)="onSeclect('Mobile')" class= "btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <p>ipad</p>
+      <p class="price">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <button (click)="onSeclect('ipad')" class= "btn">Add to Cart</button>
+    </div>
+  </div>
+  <div>
+    <h2 *ngIf = "!productselected">product</h2>
+    <h2 *ngIf = "productselected">{{productValue}}</h2>
+
+    <button class="card btn" (click) = "onAddProduct()">add to card</button>
+  </div>
+</body>
+</html>
