@@ -14,21 +14,23 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
+import { NewComponent } from './new/new.component';
+import { NgclassComponent } from './day4/ngclass/ngclass.component';
+import { HostListenerComponent } from './day4/host-listener/host-listener.component';
+import { NewDirective } from './new.directive';
+import { EmployeeComponent } from './employee/employee.component';
+import { SalaryComponent } from './salary/salary.component';
 
 const appRoutes:Routes = [
-{path:'',redirectTo:'login',pathMatch:'full'},
-{path:'home' , component:HomeComponent},
-{path:'about' , component:AboutComponent},
-{path:'contact' , component:ContactComponent},
-{path: 'profile', component:ProfileComponent },
-{path: 'helpdesk', component:HelpdeskComponent },
-{path: 'login', component:LoginpageComponent },
-{path: 'ByProduct', component:ParentComponent },
-{path: 'Lifecyclehook', component:LifecyclehookComponent },
-
-
-
-
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'home' , component:HomeComponent},
+  {path:'about' , component:AboutComponent},
+  {path:'contact' , component:ContactComponent},
+  {path: 'profile', component:ProfileComponent },
+  {path: 'helpdesk', component:HelpdeskComponent },
+  {path: 'login', component:LoginpageComponent },
+  {path: 'ByProduct', component:ParentComponent },
+  {path: 'Lifecyclehook', component:LifecyclehookComponent },
 ]
 
 @NgModule({
@@ -40,7 +42,13 @@ const appRoutes:Routes = [
     HelpdeskComponent,
     LoginpageComponent,
     CardComponent,
-    ParentComponent
+    ParentComponent,
+    NewComponent,
+    NgclassComponent,
+    HostListenerComponent,
+    NewDirective,
+    EmployeeComponent,
+    SalaryComponent
   ],
   imports: [
     BrowserModule,

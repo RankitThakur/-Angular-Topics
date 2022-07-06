@@ -1,0 +1,16 @@
+.div1{
+	border: 2px solid  red;
+	height: 2 rem;
+	width: 8rem;
+	background-color: darkred;
+	color:  white;
+}
+
+.text{
+	color : yellow;
+}
+.calss3{
+	color: black;
+	background-color: yellowgreen;
+	font-size: 20px;
+}
