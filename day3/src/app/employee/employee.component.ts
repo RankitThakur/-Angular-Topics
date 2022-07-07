@@ -1,5 +1,7 @@
 import { Component, OnInit ,ViewChild } from '@angular/core';
 import { SalaryComponent } from '../salary/salary.component';
+import { ServiceService } from '../service/service.service';
+
 
 @Component({
   selector: 'app-employee',
@@ -18,12 +20,18 @@ export class EmployeeComponent implements OnInit {
       console.log("increment")
     }
 
-    decrement(){
+  decrement(){
       this.SalaryComponent.decrement();
       console.log("decrement")
     }
+  
+
 
   ngOnInit(): void {
   }
+  msgAdd = new ServiceService
 
+  btn(){
+    this.msgAdd.add()
+  }
 }

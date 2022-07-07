@@ -8,10 +8,9 @@ export class NewDirective {
   constructor() { 
   }
 
- @HostBinding('style.backgroundColor') bgColor:any;
-
-@HostListener('mouseout') onMouseout(){
+  @HostBinding('style.backgroundColor') bgColor:any;
+  @HostListener('mouseout') onMouseout(){
   this.bgColor = "blue"
 
-}
+  }
 }

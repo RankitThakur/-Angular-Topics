@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
 </head>
 <body>
-  <div class = "myapp" id = "myapp2">
-    <h1>hello angular</h1>
-    <h2>{{title}} {{subhading}}  {{for}}</h2>
-    <h1>{{getName()}}</h1>
-    <p>Name : {{obj.name}}</p>
-    <p>ID : {{obj.id}}</p>
-    <p>arr: {{arr[2]}}</p>
-    <p>sum: {{sum+sum2}}</p>
-    <p>mul: {{sum*sum2}}</p>
-    <p>mul: {{link}}</p>
+  <ul class = "nav nav-tabs">
+    <li><a routerLink="/home">home</a></li>
+    <li><a routerLink="/about">about</a></li>
+    <li><a routerLink="/contact">contact</a></li>
+    <li><a routerLink="/profile">profile</a></li>
+    <li><a routerLink="/helpdesk">helpdesk</a></li>
+    <li><a routerLink="/login">login</a></li>
+    <li><a routerLink="/ByProduct">ByProduct</a></li>
+    <li><a routerLink="/Lifecyclehook">LifecyclehookComponent
+</a></li>
 
-<app-about></app-about>
-<app-home></app-home>
-  </div>
+  </ul>
+   <router-outlet></router-outlet>
 </body>
-</html>
-
+ </html>

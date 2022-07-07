@@ -20,10 +20,20 @@ import { HostListenerComponent } from './day4/host-listener/host-listener.compon
 import { NewDirective } from './new.directive';
 import { EmployeeComponent } from './employee/employee.component';
 import { SalaryComponent } from './salary/salary.component';
+import { ServiceService } from './service/service.service';
+import { User1Component } from './day5/user1/user1.component';
+import { User2Component } from './day5/user2/user2.component';
+import { MynewserviceService } from './mynewservice.service';
+import { RoutingComponent } from './day5/routing/routing.component';
+import { PageNotefoundComponent } from './day5/page-notefound/page-notefound.component';
+import { UsersDataComponent } from './day5/users-data/users-data.component';
+
 
 const appRoutes:Routes = [
-  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home' , component:HomeComponent},
+  {path:'usersdata' , component:UsersDataComponent},
+  {path:'usersdata/:name/:useId' , component:UsersDataComponent},
   {path:'about' , component:AboutComponent},
   {path:'contact' , component:ContactComponent},
   {path: 'profile', component:ProfileComponent },
@@ -31,6 +41,10 @@ const appRoutes:Routes = [
   {path: 'login', component:LoginpageComponent },
   {path: 'ByProduct', component:ParentComponent },
   {path: 'Lifecyclehook', component:LifecyclehookComponent },
+  {path: 'routing', component:RoutingComponent},
+  {path: '**', component:PageNotefoundComponent },
+
+
 ]
 
 @NgModule({
@@ -48,15 +62,23 @@ const appRoutes:Routes = [
     HostListenerComponent,
     NewDirective,
     EmployeeComponent,
-    SalaryComponent
+    SalaryComponent,
+    User2Component,
+    User1Component,
+    RoutingComponent,
+    PageNotefoundComponent,
+    ProfileComponent,
+    UsersDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    
   ],
 
-  providers: [],
+  providers: [ServiceService,
+  MynewserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

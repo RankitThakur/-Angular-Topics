@@ -6,39 +6,38 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./lifecyclehook.component.css']
 })
 export class LifecyclehookComponent implements OnInit {
-// @Input()company = "rankit"
 
-  // ngOnInit(): void {
-  //   console.log(" Call ngoninit")
-  // }
-  //   // ngOnChanges(changes:SimpleChanges) {
-  //   // console.log(changes)
+  ngOnInit(): void {
+    console.log(" Call ngoninit")
+  }
+    // ngOnChanges(changes:SimpleChanges) {
+    // console.log(changes)
 
-  // // }
-  // ngDoCheck(){
-  //   console.log("calll ng Do Checks")
   // }
+  ngDoCheck(){
+    console.log("calll ng Do Checks")
+  }
 
-  // ngAfterContentInit(){
-  //   console.log("call ngAfterContentInits  ")
-  // }
+  ngAfterContentInit(){
+    console.log("call ngAfterContentInits  ")
+  }
 
-  // ngAfterContentCheck(){
-  //   console.log("hello parent")
-  // }
+  ngAfterContentCheck(){
+    console.log("hello parent")
+  }
 
-  // constructor() {
-  // console.log("hello parent") 
-  // }
-  // ngAfterViewInit(){
-  //   console.log("ngAfterViewInit")
-  // }
-  // ngAfterViewChecked(){
-  //   console.log("ngAfterViewCheck")
-  // }
-  // ngOndistroy(){
-  // console.log("ngAfterViewCheck")
-  // }
+  constructor() {
+  console.log("hello parent") 
+  }
+  ngAfterViewInit(){
+    console.log("ngAfterViewInit")
+  }
+  ngAfterViewChecked(){
+    console.log("ngAfterViewCheck")
+  }
+  ngOndistroy(){
+  console.log("ngAfterViewCheck")
+  }
 }
 
 
