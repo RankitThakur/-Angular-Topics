@@ -25,27 +25,77 @@ import { MynewserviceService } from './mynewservice.service';
 import { RoutingComponent } from './day5/routing/routing.component';
 import { PageNotefoundComponent } from './day5/page-notefound/page-notefound.component';
 import { UsersDataComponent } from './day5/users-data/users-data.component';
-import{ ViewchildComponent } from  './day7/viewchild/viewchild.component';
+import { ViewchildComponent } from  './day7/viewchild/viewchild.component';
 import { StaticDataComponent } from './day7/static-data/static-data.component';
+import { ChildroutesComponent } from './day7/childroutes/childroutes.component';
+import { Chlidroute1Component } from './day7/chlidroute1/chlidroute1.component';
+import { Chlidroute2Component } from './day7/chlidroute2/chlidroute2.component';
 
 
 const appRoutes:Routes = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home' , component:HomeComponent},
-  {path:'usersdata' , component:UsersDataComponent},
-  {path:'usersdata/:name/:useId' , component:UsersDataComponent},
-  {path:'about/:name/:useId' , component:AboutComponent},
-  {path:'contact' , component:ContactComponent},
+  { 
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full'
+  },
+  { 
+    path:'home' , 
+    component:HomeComponent
+  },
+  { 
+    path:'usersdata' ,
+    component:UsersDataComponent
+  },
+  {  
+    path:'usersdata/:name/:useId',
+    component:UsersDataComponent
+  },
+  { 
+    path:'about/:name/:useId',
+    component:AboutComponent
+  },
+  { 
+    path:'contact', 
+    component:ContactComponent
+  },
   // {path: 'profile', component:ProfileComponent },
-  {path: 'helpdesk', component:HelpdeskComponent },
-  {path: 'login', component:LoginpageComponent },
-  {path: '', component:StaticDataComponent,data:{ name:'Rankit thakur', id:"23"} },
-  {path: 'ByProduct', component:ParentComponent },
-  {path: 'Lifecyclehook', component:LifecyclehookComponent },
-  {path: 'routing', component:RoutingComponent},
-  {path: '**', component:PageNotefoundComponent },
-  {path:'viewchlid', component:ViewchildComponent},
-
+  { 
+    path: 'helpdesk', 
+    component:HelpdeskComponent 
+  },
+  { 
+    path: 'login', 
+    component:LoginpageComponent 
+  },
+  { 
+    path: 'ByProduct', 
+    component:ParentComponent 
+  },
+  { 
+    path: 'Lifecyclehook', 
+    component:LifecyclehookComponent 
+  },
+  { path: 'routing', 
+    component: ChildroutesComponent, 
+  },
+  { 
+    path:'viewchlid', 
+    component:ViewchildComponent,
+  } ,
+  { 
+    path:'child',
+    component:ChildroutesComponent,
+    children: [
+      { path: 'childroute1', component:Chlidroute1Component },
+      { path:'childroute2', component: Chlidroute2Component}
+      ]
+  
+  },
+  { 
+    path: '**', 
+    component:PageNotefoundComponent 
+  }, 
+  // {path:'newchild',component:ChildroutesComponent }
 
 
 
@@ -72,7 +122,10 @@ const appRoutes:Routes = [
     PageNotefoundComponent,
     UsersDataComponent,
     ViewchildComponent,
-    StaticDataComponent
+    StaticDataComponent,
+    ChildroutesComponent,
+    Chlidroute1Component,
+    Chlidroute2Component
   ],
   imports: [
     BrowserModule,
