@@ -1,4 +1,4 @@
-import { Component ,HostListener} from '@angular/core';
+import { Component ,HostListener } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,10 +9,12 @@ export class AppComponent {
 
 data:any = "rankit"
 
-fun(data1:any){
+fun(data1:string){
   console.log(data1)
 }
 }
+
+
 
 
 
