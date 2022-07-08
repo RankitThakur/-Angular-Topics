@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { Routes,RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +26,7 @@ import { MynewserviceService } from './mynewservice.service';
 import { RoutingComponent } from './day5/routing/routing.component';
 import { PageNotefoundComponent } from './day5/page-notefound/page-notefound.component';
 import { UsersDataComponent } from './day5/users-data/users-data.component';
+import { ViewchildComponent } from './day7/viewchild/viewchild.component';
 
 
 const appRoutes:Routes = [
@@ -68,7 +68,8 @@ const appRoutes:Routes = [
     RoutingComponent,
     PageNotefoundComponent,
     ProfileComponent,
-    UsersDataComponent
+    UsersDataComponent,
+    ViewchildComponent,
   ],
   imports: [
     BrowserModule,

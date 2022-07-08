@@ -8,7 +8,7 @@
 <body>
   <ul class = "nav nav-tabs">
     <li><a routerLink="/home">home</a></li>
-    <li><a routerLink="/about">about</a></li>
+    <li><a [routerLink]="['/about']">about</a></li>
     <li><a routerLink="/contact">contact</a></li>
     <li><a routerLink="/profile">profile</a></li>
     <li><a routerLink="/helpdesk">helpdesk</a></li>
@@ -20,13 +20,18 @@
 
     
   </ul>
-     <router-outlet></router-outlet>
+     <!-- <router-outlet></router-outlet> -->
 <!-- <app-user1></app-user1> -->
   <!-- <app-host-listener></app-host-listener>
  -->
   <!-- <app-employee></app-employee> -->
   <!-- <app-user2></app-user2>
 <app-user1></app-user1>, -->
+
+
+<!-- <app-viewchild [name] = "data"></app-viewchild> -->
+<app-viewchild (newEven)  = "fun($event)"></app-viewchild>
+
 
 </body>
 </html>
