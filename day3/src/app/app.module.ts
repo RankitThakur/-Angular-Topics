@@ -32,8 +32,9 @@ import { Chlidroute1Component } from './day7/chlidroute1/chlidroute1.component';
 import { Chlidroute2Component } from './day7/chlidroute2/chlidroute2.component';
 import { QueryparamComponent } from './day7/queryparam/queryparam.component';
 import { FragmentComponent } from './day7/fragment/fragment.component';
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TemplateformsComponent } from './day7/templateforms/templateforms.component';
+import { FormsModule } from '@angular/forms';
 const appRoutes:Routes = [
   { 
     path:'',
@@ -99,6 +100,9 @@ const appRoutes:Routes = [
   {
     path:'fragment',  component:FragmentComponent
   },
+  {
+    path:"myForm", component: TemplateformsComponent
+  },
   { 
     path: '**', 
     component:PageNotefoundComponent 
@@ -135,17 +139,20 @@ const appRoutes:Routes = [
     Chlidroute1Component,
     Chlidroute2Component,
     QueryparamComponent,
-    FragmentComponent
+    FragmentComponent,
+    TemplateformsComponent,   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    
+    NgbModule,
+    FormsModule
   ],
-
-  providers: [ServiceService,
-  MynewserviceService],
+  providers: [
+    ServiceService,
+    MynewserviceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
