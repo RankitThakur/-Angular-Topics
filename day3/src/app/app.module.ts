@@ -30,6 +30,7 @@ import { StaticDataComponent } from './day7/static-data/static-data.component';
 import { ChildroutesComponent } from './day7/childroutes/childroutes.component';
 import { Chlidroute1Component } from './day7/chlidroute1/chlidroute1.component';
 import { Chlidroute2Component } from './day7/chlidroute2/chlidroute2.component';
+import { QueryparamComponent } from './day7/queryparam/queryparam.component';
 
 
 const appRoutes:Routes = [
@@ -91,6 +92,9 @@ const appRoutes:Routes = [
       ]
   
   },
+  {
+    path:"quaryparam", component:QueryparamComponent
+  },
   { 
     path: '**', 
     component:PageNotefoundComponent 
@@ -125,7 +129,8 @@ const appRoutes:Routes = [
     StaticDataComponent,
     ChildroutesComponent,
     Chlidroute1Component,
-    Chlidroute2Component
+    Chlidroute2Component,
+    QueryparamComponent
   ],
   imports: [
     BrowserModule,

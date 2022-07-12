@@ -14,6 +14,8 @@ export class StaticDataComponent implements OnInit {
     this.Route.data.subscribe((name:Data)=>{
       console.log(name)
       })
+
+      
   }
  
 
