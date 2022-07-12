@@ -31,6 +31,7 @@ import { ChildroutesComponent } from './day7/childroutes/childroutes.component';
 import { Chlidroute1Component } from './day7/chlidroute1/chlidroute1.component';
 import { Chlidroute2Component } from './day7/chlidroute2/chlidroute2.component';
 import { QueryparamComponent } from './day7/queryparam/queryparam.component';
+import { FragmentComponent } from './day7/fragment/fragment.component';
 
 
 const appRoutes:Routes = [
@@ -93,7 +94,10 @@ const appRoutes:Routes = [
   
   },
   {
-    path:"quaryparam", component:QueryparamComponent
+    path:"quaryparam/:name/:userId", component:QueryparamComponent
+  },
+  {
+    path:'fragment',  component:FragmentComponent
   },
   { 
     path: '**', 
@@ -130,7 +134,8 @@ const appRoutes:Routes = [
     ChildroutesComponent,
     Chlidroute1Component,
     Chlidroute2Component,
-    QueryparamComponent
+    QueryparamComponent,
+    FragmentComponent
   ],
   imports: [
     BrowserModule,
