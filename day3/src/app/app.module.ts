@@ -35,6 +35,8 @@ import { FragmentComponent } from './day7/fragment/fragment.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TemplateformsComponent } from './day7/templateforms/templateforms.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { ReactiveFormsModule } from '@angular/forms';
 const appRoutes:Routes = [
   { 
     path:'',
@@ -103,6 +105,9 @@ const appRoutes:Routes = [
   {
     path:"myForm", component: TemplateformsComponent
   },
+  {
+    path: "reactiveforms", component: ReactiveformComponent
+  },
   { 
     path: '**', 
     component:PageNotefoundComponent 
@@ -140,14 +145,16 @@ const appRoutes:Routes = [
     Chlidroute2Component,
     QueryparamComponent,
     FragmentComponent,
-    TemplateformsComponent,   
+    TemplateformsComponent,
+    ReactiveformComponent,   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ServiceService,

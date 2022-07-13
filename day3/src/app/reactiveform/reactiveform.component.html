@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1 class="box">Contact Form</h1>
+    <div class="box"> 
+        <div class = "col-md-6">
+            <form class = "form" [formGroup] = "contactForm" >
+                <!-- (ngSubmit) = "formSubmit(contactForm);contactForm.reset()" -->
+                <div class = "form-group" >
+                    <input type="text"  formControlName="userName"  placeholder="Enter your name" class = "form-control" required >
+                    <!-- <span class = "error">Enter your name</span> -->
+                </div><br>
+                <div class = "form-group">
+                    <input type="email" formControlName="lastName" placeholder="lastname" class = "form-control" >
+                    <!-- <span class = "error">Enter your Lastname</span> -->
+                </div><br>
+                <div class = "form-group">
+                    <input type="password" formControlName="passWord" placeholder="Enter Your Password" class = "form-control">
+                    <!-- <span class = "error" >Enter your Password</span> -->
+                </div><br>
+                <div class = "form-group">
+                    <input type="number"  formControlName="number" placeholder="Enter Your Number" class = "form-control" >
+                    <!-- <span class = "error" >Enter your Number</span> -->
+                </div><br>
+                <!-- <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>IND</option>
+                        <option>AUS</option>
+                        <option>ENG</option>
+                        <option>PAK</option>
+                    </select>
+                 </div>    -->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div><br>
+                <div class = "form-group">
+                    <input type="submit" name="send"class = "btn btn-primary" (click) = "postData()">&NonBreakingSpace;
+                    <button (click) = setData() class = "btn btn-info" >set value</button>&NonBreakingSpace;
+                    <button (click) = patchData() class = "btn btn-danger" >patch value</button>&NonBreakingSpace;
+                    <button (click) = resetData() class = "btn btn-warning" >Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <h1>User name: {{yourName}}</h1>
+        <h1>last name: {{lastName}}</h1>
+        <h1>Password : {{passWord}}</h1>
+    </div>      
+</body>
