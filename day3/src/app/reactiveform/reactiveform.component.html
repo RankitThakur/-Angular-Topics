@@ -13,12 +13,20 @@
                     <!-- <span class = "error">Enter your name</span> -->
                 </div><br>
                 <div class = "form-group">
-                    <input type="email" formControlName="lastName" placeholder="lastname" class = "form-control" >
+                    <input type="text" formControlName="lastName" placeholder="Enter your lastname" class = "form-control" >
+                    <!-- <span class = "error">Enter your Lastname</span> -->
+                </div><br>
+                <div class = "form-group">
+                    <input type="email" formControlName="email" placeholder="Email" class = "form-control">
                     <!-- <span class = "error">Enter your Lastname</span> -->
                 </div><br>
                 <div class = "form-group">
                     <input type="password" formControlName="passWord" placeholder="Enter Your Password" class = "form-control">
                     <!-- <span class = "error" >Enter your Password</span> -->
+                </div><br>
+                <div class = "form-group">
+                    <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" class = "form-control">
+                    <span class = "error"  *ngIf = "f.confirmPassword.errors.MustMatch">Enter your Password</span>
                 </div><br>
                 <div class = "form-group">
                     <input type="number"  formControlName="number" placeholder="Enter Your Number" class = "form-control" >
@@ -48,8 +56,8 @@
         </div>
     </div>
     <div>
-        <h1>User name: {{yourName}}</h1>
-        <h1>last name: {{lastName}}</h1>
-        <h1>Password : {{passWord}}</h1>
+        <h1>User name: {{yourName }}</h1>
+        <h1>last name: {{lastName }}</h1>
+        <h1>Password : {{passWord }}</h1>
     </div>      
 </body>
