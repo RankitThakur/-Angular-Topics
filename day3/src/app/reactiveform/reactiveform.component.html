@@ -6,7 +6,7 @@
     <h1 class="box">Contact Form</h1>
     <div class="box"> 
         <div class = "col-md-6">
-            <form class = "form" [formGroup] = "contactForm" >
+            <form class = "form" [formGroup] = "contactForm" (ngsubmit)="onSubmit()" >
                 <!-- (ngSubmit) = "formSubmit(contactForm);contactForm.reset()" -->
                 <div class = "form-group" >
                     <input type="text"  formControlName="userName"  placeholder="Enter your name" class = "form-control" required >
@@ -21,12 +21,20 @@
                     <!-- <span class = "error">Enter your Lastname</span> -->
                 </div><br>
                 <div class = "form-group">
-                    <input type="password" formControlName="passWord" placeholder="Enter Your Password" class = "form-control">
-                    <!-- <span class = "error" >Enter your Password</span> -->
+                    <input type="password" formControlName="passWord" placeholder="Enter Your Password"  class = "form-control">
+                    <div *ngIf="submitted && contactForm.f('passWord').errors" class="alert alert-danger">
+                        <div *ngIf="contactForm.errors('passWord').errors.required">
+                          Password is required
+                        </div>
+                    </div>
                 </div><br>
                 <div class = "form-group">
                     <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" class = "form-control">
-                    <span class = "error"  *ngIf = "f.confirmPassword.errors.MustMatch">Enter your Password</span>
+                    <div *ngIf="submitted && contactForm.f('confirmPassword').errors" class="alert alert-danger">
+                        <div *ngIf="contactForm.f('confirmPassword').errors.required">
+                          Confirm Password is required
+                        </div>
+                    </div>
                 </div><br>
                 <div class = "form-group">
                     <input type="number"  formControlName="number" placeholder="Enter Your Number" class = "form-control" >

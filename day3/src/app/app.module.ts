@@ -37,7 +37,10 @@ import { TemplateformsComponent } from './day7/templateforms/templateforms.compo
 import { FormsModule } from '@angular/forms';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PipeComponent } from './pipe/pipe.component';
+import { CustemPipeComponent } from './custem-pipe/custem-pipe.component';
+import { CustemPipePipe } from './custem-pipe.pipe';
+import { ConfirmPasswordComponent } from './confirm-password/confirm-password.component';
+
 const appRoutes:Routes = [
   { 
     path:'',
@@ -109,9 +112,6 @@ const appRoutes:Routes = [
   {
     path: "reactiveforms", component: ReactiveformComponent
   },
-  {
-    path:"pipe",component:PipeComponent
-  },
   { 
     path: '**', 
     component:PageNotefoundComponent 
@@ -151,7 +151,10 @@ const appRoutes:Routes = [
     FragmentComponent,
     TemplateformsComponent,
     ReactiveformComponent,
-    PipeComponent,  ],
+    CustemPipeComponent,
+    CustemPipePipe,
+    ConfirmPasswordComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

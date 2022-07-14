@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl, Validators,FormBuilder, AbstractControl} from '@angular/forms';
-import { min } from 'rxjs';
+import { FormGroup, Validators,FormBuilder,} from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveform',
@@ -8,40 +7,43 @@ import { min } from 'rxjs';
   styleUrls: ['./reactiveform.component.css']
 })
 export class ReactiveformComponent implements OnInit {
-
+  submitted: boolean = false;
   contactForm:any = FormGroup
   constructor(private fb:FormBuilder) { 
-    this.contactForm = fb.group({
+    this.contactForm = this.fb.group({
       userName: ['',[Validators.required, Validators.minLength(5)]],
       passWord: ['',[Validators.required,]],
-      confirmPassword: ['', [Validators.required, Validators.minLength(5)]],
+      confirmPassword: ['', [Validators.required]],
       lastName: ['',Validators.required],
       number: ['',[Validators.required,Validators.minLength(10),Validators.maxLength(12)]],
       email: ['',[Validators.required,Validators. email,  Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") ]]
-    },
-    {
-      Validators: this.MustMatch("passWord","confirmPassword")
     })
+    {
+      Validators: this.ConfirmPasswordValidator("passWord","confirmPassword")
+    }
   }
   get f() { return this.contactForm.controls; } 
-  MustMatch(controlName:any,matchingControlName:string){
-      return(formGroup:FormGroup)=>{
-        const control = formGroup.controls[controlName];
-        const matchingControl = formGroup.controls[matchingControlName];
-        if (matchingControl.errors && !matchingControl.errors["MustMatch"]){
-          return;
-        }
-        if(control.value !== matchingControl.value){
-          matchingControl.setErrors({ MustMatch:true  })       
-         }
-        else{
-          matchingControl.setErrors(null)       
-
-        }
-
+  ConfirmPasswordValidator(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
+      let control = formGroup.controls[controlName];
+      let matchingControl = formGroup.controls[matchingControlName]
+      if (
+        matchingControl.errors && !matchingControl.errors['confirmPasswordValidator']
+      ) {
+        return;
       }
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ confirmPasswordValidator: true });
+      } else {
+        matchingControl.setErrors(null);
+      }
+    };
   }
-  
+
+   onSubmit() {
+    this.submitted = true;
+   }
+
   yourName:string = ''
   passWord:any = ''
   lastName:string = ''
@@ -59,7 +61,7 @@ export class ReactiveformComponent implements OnInit {
     this.passWord = this.contactForm.get("passWord").value
     this.lastName = this.contactForm.get("lastName").value
     this.email = this.contactForm.get("email").value
-    this.confirmPassword = this.contactForm.get("confirmPassWord").value
+    this.confirmPassword = this.contactForm.get("confirmPassword").value
   }
   ngOnInit(): void {
   }
