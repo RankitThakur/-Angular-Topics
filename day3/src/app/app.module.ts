@@ -40,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CustemPipeComponent } from './custem-pipe/custem-pipe.component';
 import { CustemPipePipe } from './custem-pipe.pipe';
 import { ConfirmPasswordComponent } from './confirm-password/confirm-password.component';
+import { FillterPipe } from './fillter.pipe';
 
 const appRoutes:Routes = [
   { 
@@ -112,6 +113,9 @@ const appRoutes:Routes = [
   {
     path: "reactiveforms", component: ReactiveformComponent
   },
+  {
+  path:'custempipe', component: CustemPipeComponent
+  },
   { 
     path: '**', 
     component:PageNotefoundComponent 
@@ -154,6 +158,7 @@ const appRoutes:Routes = [
     CustemPipeComponent,
     CustemPipePipe,
     ConfirmPasswordComponent,
+    FillterPipe,
   ],
   imports: [
     BrowserModule,

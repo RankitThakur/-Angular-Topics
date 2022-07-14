@@ -16,6 +16,8 @@
                     <input type="text" formControlName="lastName" placeholder="Enter your lastname" class = "form-control" >
                     <!-- <span class = "error">Enter your Lastname</span> -->
                 </div><br>
+                {{contactForm.get('email')?.errors | json}}
+
                 <div class = "form-group">
                     <input type="email" formControlName="email" placeholder="Email" class = "form-control">
                     <!-- <span class = "error">Enter your Lastname</span> -->

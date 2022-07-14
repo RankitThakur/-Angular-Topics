@@ -16,7 +16,7 @@ export class ReactiveformComponent implements OnInit {
       confirmPassword: ['', [Validators.required]],
       lastName: ['',Validators.required],
       number: ['',[Validators.required,Validators.minLength(10),Validators.maxLength(12)]],
-      email: ['',[Validators.required,Validators. email,  Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") ]]
+      email: ['',[Validators.required,  Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$") ]]
     })
     {
       Validators: this.ConfirmPasswordValidator("passWord","confirmPassword")

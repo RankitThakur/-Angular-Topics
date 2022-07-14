@@ -5,8 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustemPipePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: string, Gender: string): string {
+    if(Gender == "Male"){
+      return "MR."+value;
+    }
+    else{
+    return "MISS." + value
   }
-
+  }
 }

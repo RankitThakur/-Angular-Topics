@@ -17,9 +17,9 @@ export class ConfirmPasswordComponent implements OnInit {
   ngOnInit() {
     this.registerForm = this.fb.group(
       {
-        email: ["",Validators.required],
-        password: ["",Validators.required],
-        confirmPassword: ["",Validators.required]
+        email: ["",[Validators.required ,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+        password: ["",[Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+        confirmPassword: ["",[Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]]
       },
       {
         validator: this.ConfirmPasswordValidator("password", "confirmPassword")
