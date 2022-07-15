@@ -41,6 +41,12 @@ import { CustemPipeComponent } from './custem-pipe/custem-pipe.component';
 import { CustemPipePipe } from './custem-pipe.pipe';
 import { ConfirmPasswordComponent } from './confirm-password/confirm-password.component';
 import { FillterPipe } from './fillter.pipe';
+import { RouterguardGuard } from './routerguard.guard';
+import { AdminGuard } from './admin.guard';
+import { HttpServiceService } from './http-service.service';
+import { HttpPutAndPostdataComponent } from './http-put-and-postdata/http-put-and-postdata.component';
+import { HttpDemoComponent } from './http-demo/http-demo.component';
+import { Admin2Guard } from './admin2.guard';
 
 const appRoutes:Routes = [
   { 
@@ -48,13 +54,14 @@ const appRoutes:Routes = [
     redirectTo:'home',
     pathMatch:'full'
   },
+  
   { 
     path:'home' , 
-    component:HomeComponent
+    component:HomeComponent,canActivate :[ RouterguardGuard ]
   },
   { 
     path:'usersdata' ,
-    component:UsersDataComponent
+    component:UsersDataComponent, canDeactivate : [Admin2Guard ]
   },
   {  
     path:'usersdata/:name/:useId',
@@ -79,7 +86,7 @@ const appRoutes:Routes = [
   },
   { 
     path: 'ByProduct', 
-    component:ParentComponent 
+    component:ParentComponent
   },
   { 
     path: 'Lifecyclehook', 
@@ -94,7 +101,7 @@ const appRoutes:Routes = [
   } ,
   { 
     path:'child',
-    component:ChildroutesComponent,
+    component:ChildroutesComponent,canActivateChild : [AdminGuard],
     children: [
       { path: 'childroute1', component:Chlidroute1Component },
       { path:'childroute2', component: Chlidroute2Component}
@@ -114,7 +121,7 @@ const appRoutes:Routes = [
     path: "reactiveforms", component: ReactiveformComponent
   },
   {
-  path:'custempipe', component: CustemPipeComponent
+  path:'custempipe', component: CustemPipeComponent, 
   },
   { 
     path: '**', 
@@ -159,6 +166,8 @@ const appRoutes:Routes = [
     CustemPipePipe,
     ConfirmPasswordComponent,
     FillterPipe,
+    HttpPutAndPostdataComponent,
+    HttpDemoComponent,
   ],
   imports: [
     BrowserModule,
@@ -166,11 +175,17 @@ const appRoutes:Routes = [
     RouterModule.forRoot(appRoutes),
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
+    
   ],
   providers: [
     ServiceService,
-    MynewserviceService
+    MynewserviceService,
+    RouterguardGuard,
+    AdminGuard,
+    HttpServiceService,
+    Admin2Guard
   ],
   bootstrap: [AppComponent]
 })

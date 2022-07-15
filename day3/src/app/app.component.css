@@ -19,17 +19,6 @@ li a {
 }
 li a:hover {
   background-color: #111;
-  display: inline-block;
 }
 
 
-.div1{
- background-color: red;
- display: inline-block;
-
-
-}
-.div2{
-  display: block;
-  background-color: greenyellow;
- }
