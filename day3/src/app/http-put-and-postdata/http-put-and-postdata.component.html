@@ -1,0 +1,34 @@
+<p>http-put-and-postdata works!</p>
+<!-- <p class="alert alert-danger" >Mul: {{24 | custemPipe:10}}</p> -->
+<div class="input-group">
+    <div class="form-outline">
+      <input type="text" id="form1" class="form-control"  [(ngModel)] = "nameSearch"/>
+      <label class="form-label" for="form1" >Search</label>
+    </div><br>
+    <div>
+    <input type="text"  class="form-control" #add>
+    <button class = "btn btn-danger" (click) = "addpro(add)">ADD PRODUCT</button>
+    </div>
+    <br>
+    <button class = "btn btn-danger" (click) = "onSaveProduct()">Save</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>CourseFee</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of students| filter:nameSearch'>
+            <td>{{  student.ID | uppercase  }}</td>
+            <td>{{  student.Name | custemPipe: student.Gender  }}</td>
+            <td>{{  student.DOB | date:'dd/MM/yyyy' }}</td>
+            <td>{{  student.Gender | lowercase }}</td>
+            <td>{{  student.CourseFee | currency:'USD':true }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,55 @@
+<p>http-demo works!</p>
+<!-- <p class="alert alert-danger" >Mul: {{24 | custemPipe:10}}</p> -->
+<div class="input-group">
+    <div class="form-outline">
+      <input type="text" id="form1" class="form-control"/>
+      <label class="form-label" for="form1" >Search</label>
+    </div><br>
+    <!-- <div>
+    <input type="text"  class="form-control" #add>
+    <button class = "btn btn-danger" (click) = "addpro(add)">ADD PRODUCT</button>
+    </div> -->
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>username</th>
+            <th>email</th>
+            <th>city</th>
+            <th>zipcode</th>
+            <th>phone</th>            
+        </tr>
+        <button  class = "btn btn-danger" (click) = "clickData1()" >Show</button>
+
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of product'>
+            <td>{{  student.username | uppercase  }}</td>
+            <td>{{  student.email}}</td>
+            <td>{{  student.address.city }}</td>
+            <td>{{  student.address.zipcode }}</td>
+            <td>{{  student.phone }}</td>
+        </tr>
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>albumId</th>
+            <th>title</th>
+            <th>url</th>
+            <th>thumbnailUrl</th>
+            <th>id</th>            
+        </tr>
+        <button  class = "btn btn-danger" (click) = "clickMe()" >Show</button>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of image'>
+            <td>{{  student.albumId }}</td>
+            <td>{{  student.title}}</td>
+            <td>{{  student.url }}</td>
+            <td>{{  student.thumbnailUrl }}</td>
+            <td>{{  student.id }}</td>
+        </tr>
+    </tbody>
+</table>
