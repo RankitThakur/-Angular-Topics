@@ -12,10 +12,10 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
   product = [
-  {name: "mobile",id: "23"},
-  {name: "laptop",id:"24"},
-  {name: "laptop",id:"24"},
-  {name: "laptop",id:"24"}
+    { name: "mobile", id: "23" },
+    { name: "laptop",id:"24"  },
+    { name: "laptop",id:"24"  },
+    { name: "laptop",id:"24"  }
   ]
 
 }

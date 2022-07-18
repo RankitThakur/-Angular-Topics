@@ -40,9 +40,9 @@ export class ReactiveformComponent implements OnInit {
     };
   }
 
-   onSubmit() {
+  onSubmit() {
     this.submitted = true;
-   }
+  }
 
   yourName:string = ''
   passWord:any = ''
@@ -76,12 +76,14 @@ export class ReactiveformComponent implements OnInit {
     })
 
   }
+
   patchData(){
     this.contactForm.patchValue({
     "userName": "rankit",
     "passWord": 4444444,
     })
   }
+  
   resetData(){
     this.contactForm.reset()
   }

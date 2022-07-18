@@ -20,8 +20,7 @@ export class SalaryComponent implements OnInit {
   }
   @HostBinding('style.color') bgColor:any;
   @HostListener('mouseout') onMouseout(){
-  this.bgColor = "blue"
-
-}
+    this.bgColor = "blue"
+  }
 }
 

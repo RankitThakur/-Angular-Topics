@@ -1,15 +1,17 @@
-import { NgModule, ViewChild } from '@angular/core';
+import { NgModule,  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes,RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule, } from '@angular/common/http';
+
+
+
+
 import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
 import { TemplateRefernceComponent } from './template-refernce/template-refernce.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { HelpdeskComponent } from './helpdesk/helpdesk.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
 import { NewComponent } from './new/new.component';
@@ -18,10 +20,8 @@ import { HostListenerComponent } from './day4/host-listener/host-listener.compon
 import { NewDirective } from './new.directive';
 import { EmployeeComponent } from './employee/employee.component';
 import { SalaryComponent } from './salary/salary.component';
-import { ServiceService } from './service/service.service';
 import { User1Component } from './day5/user1/user1.component';
 import { User2Component } from './day5/user2/user2.component';
-import { MynewserviceService } from './mynewservice.service';
 import { RoutingComponent } from './day5/routing/routing.component';
 import { PageNotefoundComponent } from './day5/page-notefound/page-notefound.component';
 import { UsersDataComponent } from './day5/users-data/users-data.component';
@@ -43,96 +43,12 @@ import { ConfirmPasswordComponent } from './confirm-password/confirm-password.co
 import { FillterPipe } from './fillter.pipe';
 import { RouterguardGuard } from './routerguard.guard';
 import { AdminGuard } from './admin.guard';
-import { HttpServiceService } from './http-service.service';
 import { HttpPutAndPostdataComponent } from './http-put-and-postdata/http-put-and-postdata.component';
 import { HttpDemoComponent } from './http-demo/http-demo.component';
 import { Admin2Guard } from './admin2.guard';
-
-const appRoutes:Routes = [
-  { 
-    path:'',
-    redirectTo:'home',
-    pathMatch:'full'
-  },
-  
-  { 
-    path:'home' , 
-    component:HomeComponent,canActivate :[ RouterguardGuard ]
-  },
-  { 
-    path:'usersdata' ,
-    component:UsersDataComponent, canDeactivate : [Admin2Guard ]
-  },
-  {  
-    path:'usersdata/:name/:useId',
-    component:UsersDataComponent
-  },
-  { 
-    path:'about/:name/:useId',
-    component:AboutComponent
-  },
-  { 
-    path:'contact', 
-    component:ContactComponent
-  },
-  // {path: 'profile', component:ProfileComponent },
-  { 
-    path: 'helpdesk', 
-    component:HelpdeskComponent 
-  },
-  { 
-    path: 'login', 
-    component:LoginpageComponent 
-  },
-  { 
-    path: 'ByProduct', 
-    component:ParentComponent
-  },
-  { 
-    path: 'Lifecyclehook', 
-    component:LifecyclehookComponent 
-  },
-  { path: 'routing', 
-    component: ChildroutesComponent, 
-  },
-  { 
-    path:'viewchlid', 
-    component:ViewchildComponent,
-  } ,
-  { 
-    path:'child',
-    component:ChildroutesComponent,canActivateChild : [AdminGuard],
-    children: [
-      { path: 'childroute1', component:Chlidroute1Component },
-      { path:'childroute2', component: Chlidroute2Component}
-      ]
-  
-  },
-  {
-    path:"quaryparam/:name/:userId", component:QueryparamComponent
-  },
-  {
-    path:'fragment',  component:FragmentComponent
-  },
-  {
-    path:"myForm", component: TemplateformsComponent
-  },
-  {
-    path: "reactiveforms", component: ReactiveformComponent
-  },
-  {
-  path:'custempipe', component: CustemPipeComponent, 
-  },
-  { 
-    path: '**', 
-    component:PageNotefoundComponent 
-  }, 
-  // {path:'newchild',component:ChildroutesComponent }
-
-
-
-]
-
+import { ObservablesComponent } from './observables/observables.component';
+import { ServiceService } from './service/service.service';
+import { HttpServiceService } from './http-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -168,24 +84,24 @@ const appRoutes:Routes = [
     FillterPipe,
     HttpPutAndPostdataComponent,
     HttpDemoComponent,
+    ObservablesComponent,  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    
-    
+    RouterModule,
+    HttpClientModule,
+
   ],
   providers: [
-    ServiceService,
-    MynewserviceService,
     RouterguardGuard,
     AdminGuard,
+    Admin2Guard,
+    ServiceService,
     HttpServiceService,
-    Admin2Guard
   ],
   bootstrap: [AppComponent]
 })

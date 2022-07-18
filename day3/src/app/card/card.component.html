@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-
-  <h2 style="text-align:center">Product Card</h2>
-
-  <div class="card">
-	<ng-content select = ".lg"></ng-content>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <ng-content select=".btn"></ng-content>
-  </div>
-</body>
+  <head>
+  </head>
+  <body>
+    <h2 style="text-align:center">Product Card</h2>
+    <div class="card">
+      <ng-content select = ".lg"></ng-content>
+      <p class="price">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <ng-content select=".btn"></ng-content>
+    </div>
+  </body>
 </html>

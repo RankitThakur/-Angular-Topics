@@ -10,10 +10,10 @@ import { FormBuilder,FormGroup,Validators ,FormControl,ReactiveFormsModule} from
 export class ConfirmPasswordComponent implements OnInit {
   registerForm!: FormGroup;
   submitted: boolean = false;
- ​
+
   constructor(private fb: FormBuilder) {
   }
- ​
+
   ngOnInit() {
     this.registerForm = this.fb.group(
       {
@@ -26,8 +26,8 @@ export class ConfirmPasswordComponent implements OnInit {
       }
     );
 
-   }
-   ​ConfirmPasswordValidator(controlName: string, matchingControlName: string) {
+  }
+  ​ConfirmPasswordValidator(controlName: string, matchingControlName: string) {
     return (formGroup: FormGroup) => {
       let control = formGroup.controls[controlName];
       let matchingControl = formGroup.controls[matchingControlName]
@@ -45,10 +45,8 @@ export class ConfirmPasswordComponent implements OnInit {
       
     };
   }
- 
-
-onSubmit() {
-  this.submitted = true;
-}
+  onSubmit() {
+    this.submitted = true;
+  }
 }
  

@@ -14,8 +14,8 @@ export class User1Component implements OnInit {
   }
   user = ""
   btn2(){
- this.user = this._mynewservice.username
- console.log(this.user)
+    this.user = this._mynewservice.username
+    console.log(this.user)
   }
 
 }

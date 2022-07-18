@@ -12,25 +12,18 @@ export class EmployeeComponent implements OnInit {
 
   @ViewChild (SalaryComponent) SalaryComponent:any ;
 
-  constructor() { 
-
-  }
+  constructor() { }
   increment(){
     this.SalaryComponent.increment();
       console.log("increment")
     }
 
   decrement(){
-      this.SalaryComponent.decrement();
-      console.log("decrement")
-    }
-  
-
-
-  ngOnInit(): void {
+    this.SalaryComponent.decrement();
+    console.log("decrement")
   }
+  ngOnInit(): void {}
   msgAdd = new ServiceService
-
   btn(){
     this.msgAdd.add()
   }

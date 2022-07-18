@@ -1,0 +1,21 @@
+<p>observables works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>CourseFee</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of user$ | async'>
+            <td>{{  student.id }}</td>
+            <td>{{  student.name }}</td>
+            <td>{{  student.DOB }}</td>
+            <td>{{  student.Gender}}</td>
+            <td>{{  student.CourseFee }}</td>
+        </tr>
+    </tbody>
+</table>

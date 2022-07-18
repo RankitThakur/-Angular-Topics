@@ -7,7 +7,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 export class LifecyclehookComponent implements OnInit, OnChanges {
   @Input() name:any = ""
   constructor() {
-  console.log("constructor") 
+    console.log("constructor") 
   }
   
   ngOnInit(): void {
@@ -18,31 +18,29 @@ export class LifecyclehookComponent implements OnInit, OnChanges {
     console.log("changes")
   }
 
+  ngDoCheck(){
+    console.log("calll ng Do Checks")
+  }
+
+  ngAfterContentInit(){
+    console.log("call ngAfterContentInits  ")
+  }
+
+  ngAfterContentCheck(){
+    console.log("ngAfterContentCheck")
+  }
+
+  ngAfterViewInit(){
+    console.log("ngAfterViewInit")
+  }
+
+  ngAfterViewChecked(){
+    console.log("ngAfterViewCheck")
+  }
   
-  // ngDoCheck(){
-  //   console.log("calll ng Do Checks")
-  // }
-
-  // ngAfterContentInit(){
-  //   console.log("call ngAfterContentInits  ")
-  // }
-
-  // ngAfterContentCheck(){
-  //   console.log("ngAfterContentCheck")
-  // }
-
-  // constructor() {
-  // console.log("") 
-  // }
-  // ngAfterViewInit(){
-  //   console.log("ngAfterViewInit")
-  // }
-  // ngAfterViewChecked(){
-  //   console.log("ngAfterViewCheck")
-  // }
-  // ngOndistroy(){
-  // console.log("ngAfterViewCheck")
-  // }
+  ngOndistroy(){
+  console.log("ngAfterViewCheck")
+  }
 }
 
 

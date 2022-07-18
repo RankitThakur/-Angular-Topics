@@ -10,7 +10,7 @@ export class User2Component implements OnInit {
 
   constructor(private _msgadd:ServiceService) { }
 
-  courses:any = ""
+  courses :any = ""
   ngOnInit(): void {
     this.courses = this._msgadd.getdata();
 

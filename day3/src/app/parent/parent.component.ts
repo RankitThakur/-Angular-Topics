@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-
+  select:boolean = true;
+  selectedProduct:string = ""
   constructor() { }
 
   ngOnInit(): void {
@@ -17,8 +18,6 @@ export class ParentComponent implements OnInit {
     this.productselected = true;
     this.productValue = value
   }
-  select:boolean = true;
-  selectedProduct:string = ""
   onAddProduct(){
     this.select = false
     this.selectedProduct = this.productValue

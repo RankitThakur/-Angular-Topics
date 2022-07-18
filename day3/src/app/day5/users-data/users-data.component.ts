@@ -7,11 +7,9 @@ import { __param } from 'tslib';
   styleUrls: ['./users-data.component.css']
 })
 export class UsersDataComponent implements OnInit {
- name:any = ""
- userid:any = ""
- constructor(private Route: ActivatedRoute) { 
-  
-  }
+  name:any = ""
+  userid:any = ""
+  constructor(private Route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.Route.params.subscribe(__param =>{
