@@ -12,10 +12,6 @@ export class User1Component implements OnInit {
 
   ngOnInit(): void {
   }
-  user = ""
-  btn2(){
-    this.user = this._mynewservice.username
-    console.log(this.user)
+
   }
 
-}

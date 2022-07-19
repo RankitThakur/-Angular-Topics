@@ -1,4 +1,5 @@
 import { Component, } from '@angular/core';
+import { SubjectService } from './service/subject.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,12 +7,18 @@ import { Component, } from '@angular/core';
 })
 export class AppComponent {
   title = 'day3';
+  data:any = "rankit";
+  live:boolean = false;
 
-data:any = "rankit"
+  constructor(private sub:SubjectService){
+    this.sub.live.subscribe(res =>  {
+      this.live = res;
+    })
+  }
 
-fun(data1:string){
-  console.log(data1)
-}
+  fun(data1: string){
+    console.log(data1)
+  }
 }
 
 

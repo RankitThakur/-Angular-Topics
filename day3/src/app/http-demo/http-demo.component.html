@@ -19,7 +19,7 @@
             <th>zipcode</th>
             <th>phone</th>            
         </tr>
-        <button  class = "btn btn-danger" (click) = "clickData1()" >Show</button>
+        <button  class = "btn btn-danger" *ngIf = "!clickData1"(click) = "clickData1()" >Show</button>
 
     </thead>
     <tbody>

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes,RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule, } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, } from '@angular/common/http';
 
 
 
@@ -49,6 +49,14 @@ import { Admin2Guard } from './admin2.guard';
 import { ObservablesComponent } from './observables/observables.component';
 import { ServiceService } from './service/service.service';
 import { HttpServiceService } from './http-service.service';
+import { ChildComponent } from './child/child.component';
+import { InputPerentComponent } from './input-perent/input-perent.component';
+import { Comp1Component } from './subjects/comp1/comp1.component';
+import { Comp2Component } from './subjects/comp2/comp2.component';
+import { Comp3Component } from './subjects/comp3/comp3.component';
+import { Comp4Component } from './subjects/comp4/comp4.component';
+import { FinalcompComponent } from './subjects/finalcomp/finalcomp.component';
+import { HttpErrorInterceptor } from './interceptor/http-error.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +92,14 @@ import { HttpServiceService } from './http-service.service';
     FillterPipe,
     HttpPutAndPostdataComponent,
     HttpDemoComponent,
-    ObservablesComponent,  
+    ObservablesComponent,
+    ChildComponent,
+    InputPerentComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    FinalcompComponent,  
   ],
   imports: [
     BrowserModule,
@@ -102,6 +117,11 @@ import { HttpServiceService } from './http-service.service';
     Admin2Guard,
     ServiceService,
     HttpServiceService,
+    {
+     provide: HTTP_INTERCEPTORS,
+     useClass:HttpErrorInterceptor,
+     multi:true,
+    }
   ],
   bootstrap: [AppComponent]
 })

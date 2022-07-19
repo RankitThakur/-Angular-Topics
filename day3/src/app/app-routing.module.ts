@@ -24,6 +24,7 @@ import { RouterguardGuard } from './routerguard.guard';
 import { ObservablesComponent } from './observables/observables.component';
 import { DataResolver } from './resolver/data.resolver';
 import { UserResolver } from './resolver/user.resolver';
+import { Comp1Component } from './subjects/comp1/comp1.component';
 const routes: Routes = [
   { 
     path:'',
@@ -110,6 +111,10 @@ const routes: Routes = [
     path: 'observables',
     component: ObservablesComponent,
     resolve:{result:DataResolver}
+  },
+  {
+    path: 'comp1',
+    component: Comp1Component
   },
   { 
     path: '**', 
