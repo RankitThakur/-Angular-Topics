@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { HttpServiceService } from '../http-service.service';
 
 @Component({
@@ -7,12 +8,14 @@ import { HttpServiceService } from '../http-service.service';
   styleUrls: ['./http-put-and-postdata.component.css']
 })
 export class HttpPutAndPostdataComponent implements OnInit {
-  nameSearch:any = '';
-  constructor(private data:HttpServiceService) { }
+  nameSearch: any = '';
+
+  constructor(private data: HttpServiceService) { }
 
   ngOnInit(): void {
   }
-  students:any = [
+
+  students: any = [
     {
       ID: 'std101', 
       Name: 'Rakesh Rout',
@@ -70,20 +73,21 @@ export class HttpPutAndPostdataComponent implements OnInit {
       CourseFee: 1234
     },
   ]
-  addpro(add:any) {
+
+  addpro(add: any) {
     this.students.push(
       {
-          ID: '#',
-          Name:add.value,
-          DOB: '12/8/1988', 
-          Gender: 'Male', 
-          CourseFee: 1234
+        ID: '#',
+        Name:add.value,
+        DOB: '12/8/1988', 
+        Gender: 'Male', 
+        CourseFee: 1234
       }
     ) 
   }
-  onSaveProduct(){
-    this.data.putData(this.students).subscribe((respones)=> console.log(respones))
 
+  onSaveProduct() {
+    this.data.putData(this.students).subscribe((respones)=> console.log(respones));
   }
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { HttpServiceService } from '../http-service.service';
 @Component({
   selector: 'app-observables',
@@ -11,8 +12,9 @@ export class ObservablesComponent implements OnInit {
 
   constructor(private httpService: HttpServiceService){ 
     this.user$ = this.httpService.students()
-    console.log(this.user$)
+    console.log(this.user$);
   }
+
   ngOnInit(): void {
   }
 }

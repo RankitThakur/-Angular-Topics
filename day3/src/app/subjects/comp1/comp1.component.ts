@@ -8,11 +8,12 @@ import { SubjectService } from 'src/app/service/subject.service';
 })
 export class Comp1Component implements OnInit {
 
-  constructor(private sub:SubjectService ) { }
+  constructor(private sub: SubjectService ) { }
 
   ngOnInit(): void {
     this.sub.live.next(true);
   }
+
   ngOnDestroy(): void{
     this.sub.live.next(false);
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { HttpServiceService } from '../http-service.service';
 
 @Component({
@@ -20,11 +21,11 @@ export class HttpDemoComponent implements OnInit {
   }
 
   clickMe() {   
-    this.data.photo().subscribe(imageData => this.image = imageData)
+    this.data.photo().subscribe(imageData => this.image = imageData);
   }
   
   clickData1() {
-    this.data.students().subscribe(productData => this.product = productData)
+    this.data.students().subscribe(productData => this.product = productData);
   }
 
 }

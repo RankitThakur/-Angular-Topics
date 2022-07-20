@@ -7,13 +7,12 @@ import { ServiceService } from 'src/app/service/service.service';
   styleUrls: ['./user2.component.css']
 })
 export class User2Component implements OnInit {
+  courses: any = ""
 
-  constructor(private _msgadd:ServiceService) { }
+  constructor(private _msgadd: ServiceService) { }
 
-  courses :any = ""
   ngOnInit(): void {
     this.courses = this._msgadd.getdata();
-
   }
 
   btn(){

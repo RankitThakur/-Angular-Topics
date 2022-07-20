@@ -5,41 +5,42 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./lifecyclehook.component.css']
 })
 export class LifecyclehookComponent implements OnInit, OnChanges {
-  @Input() name:any = ""
+  @Input() name:any = "";
+
   constructor() {
-    console.log("constructor") 
+    console.log("constructor") ;
   }
   
   ngOnInit(): void {
-    console.log(" Call ngoninit")
+    console.log(" Call ngoninit");
   }
   
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("changes")
+    console.log("changes");
   }
 
   ngDoCheck(){
-    console.log("calll ng Do Checks")
+    console.log("calll ng Do Checks");
   }
 
   ngAfterContentInit(){
-    console.log("call ngAfterContentInits  ")
+    console.log("call ngAfterContentInits");
   }
 
   ngAfterContentCheck(){
-    console.log("ngAfterContentCheck")
+    console.log("ngAfterContentCheck");
   }
 
   ngAfterViewInit(){
-    console.log("ngAfterViewInit")
+    console.log("ngAfterViewInit");
   }
 
   ngAfterViewChecked(){
-    console.log("ngAfterViewCheck")
+    console.log("ngAfterViewCheck");
   }
   
   ngOndistroy(){
-  console.log("ngAfterViewCheck")
+  console.log("ngAfterViewCheck");
   }
 }
 

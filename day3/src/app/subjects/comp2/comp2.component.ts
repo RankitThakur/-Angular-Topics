@@ -7,9 +7,9 @@ import { SubjectService } from 'src/app/service/subject.service';
   styleUrls: ['./comp2.component.css']
 })
 export class Comp2Component implements OnInit {
+  userData: any = "";
 
-  userData:any = "";
-  constructor(private user:SubjectService) { 
+  constructor(private user: SubjectService) { 
     this.user.userName.subscribe(res => {
       this.userData= res;
     })

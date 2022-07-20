@@ -21,4 +21,9 @@ li a:hover {
   background-color: #111;
 }
 
+app-computer{
+  background-color: antiquewhite;
+  border: 2px solid red;
+}
+
 

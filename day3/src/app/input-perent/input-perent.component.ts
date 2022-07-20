@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputPerentComponent implements OnInit {
   child:string = "hello";
-  newchlid: boolean = false
+  newchlid: boolean = false;
+
   constructor() { }
+
   myFunction(val: any){
     this.child = val
   }
+
   myFun(val: any){
-    val = true
-    this.newchlid = val
+    val = true;
+    this.newchlid = val;
     }
 
   ngOnInit(): void {

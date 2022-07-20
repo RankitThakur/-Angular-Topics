@@ -8,10 +8,10 @@ import { Component, OnInit, Input, SimpleChange,OnChanges} from '@angular/core';
 export class ChildComponent implements OnInit {
 
   constructor() { }
-  @Input() myInput:any;
-  @Input() myInput2:any;
+  @Input() myInput: any;
+  @Input() myInput2: any;
 
-  ngOnChanges (changes : SimpleChange){
+  ngOnChanges (changes: SimpleChange){
     console.log(SimpleChange)
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { SubjectService } from 'src/app/service/subject.service';
 
 @Component({
@@ -7,9 +8,10 @@ import { SubjectService } from 'src/app/service/subject.service';
   styleUrls: ['./finalcomp.component.css']
 })
 export class FinalcompComponent implements OnInit {
+  userData: any = "";
 
-  constructor(private user:SubjectService) { }
-  userData:any = "";
+  constructor(private user: SubjectService) { }
+
   ngOnInit(): void {
     this.user.userName.subscribe(res => {
       this.userData= res;

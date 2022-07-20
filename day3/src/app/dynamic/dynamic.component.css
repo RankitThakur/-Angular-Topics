@@ -1,0 +1,15 @@
+.display {
+    border: 2px red solid;
+    height: 20rem;
+    margin-top: 2 rem;
+}
+
+ul li:hover{
+  background-color: rgb(138, 252, 132);
+  overflow: auto;
+}
+
+app-mobile {
+  background-color:  lightsalmon;
+  border: 2px solid red;
+}

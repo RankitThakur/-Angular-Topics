@@ -10,21 +10,21 @@ import { ServiceService } from '../service/service.service';
 })
 export class EmployeeComponent implements OnInit {
 
-  @ViewChild (SalaryComponent) SalaryComponent:any ;
+  @ViewChild ( SalaryComponent ) SalaryComponent: any ;
 
   constructor() { }
   increment(){
     this.SalaryComponent.increment();
-      console.log("increment")
+      console.log("increment");
     }
 
   decrement(){
     this.SalaryComponent.decrement();
-    console.log("decrement")
+    console.log("decrement");
   }
   ngOnInit(): void {}
   msgAdd = new ServiceService
   btn(){
-    this.msgAdd.add()
+    this.msgAdd.add();
   }
 }

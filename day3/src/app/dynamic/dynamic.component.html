@@ -1,0 +1,17 @@
+<ul class="list-group list-group-flush">
+    <li (click)= "createComponent(product.mobile)" class="list-group-item">Mobile</li>
+    <li (click)= "createComponent(product.computer)" class="list-group-item">Computer</li>
+    <li class="list-group-item">Ipad</li>
+    <li (click)= "createComponent(product.laptop)" class="list-group-item">Laptop</li>
+</ul>
+<div class="display" >
+    <ng-container #container></ng-container>
+</div><br><br>
+<div>
+    <button class="btn btn-success" (click)="assign('cow')">cow</button>&nbsp;
+    <button class="btn btn-denger" (click)="assign('dog')">dog</button>&nbsp;
+    <button class="btn btn-primary" (click)="assign('cat')">cat</button>&nbsp;
+</div>
+<div class="display" >
+    <ng-container *ngComponentOutlet="dummy"></ng-container>
+</div>

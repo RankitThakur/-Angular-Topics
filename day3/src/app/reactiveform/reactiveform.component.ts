@@ -8,7 +8,8 @@ import { FormGroup, Validators,FormBuilder,} from '@angular/forms';
 })
 export class ReactiveformComponent implements OnInit {
   submitted: boolean = false;
-  contactForm:any = FormGroup
+  contactForm:any = FormGroup;
+
   constructor(private fb:FormBuilder) { 
     this.contactForm = this.fb.group({
       userName: ['',[Validators.required, Validators.minLength(5)]],
@@ -22,7 +23,9 @@ export class ReactiveformComponent implements OnInit {
       Validators: this.ConfirmPasswordValidator("passWord","confirmPassword")
     }
   }
+
   get f() { return this.contactForm.controls; } 
+
   ConfirmPasswordValidator(controlName: string, matchingControlName: string) {
     return (formGroup: FormGroup) => {
       let control = formGroup.controls[controlName];
@@ -44,11 +47,11 @@ export class ReactiveformComponent implements OnInit {
     this.submitted = true;
   }
 
-  yourName:string = ''
-  passWord:any = ''
-  lastName:string = ''
-  email:any = ""
-  confirmPassword:any = ""
+  yourName: string = ''
+  passWord: any = '';
+  lastName: string = '';
+  email: any = "";
+  confirmPassword: any = "";
   //   formSubmit(val:any){
   //   let data = val.value
   //   this.yourName = data.userName
@@ -56,36 +59,35 @@ export class ReactiveformComponent implements OnInit {
   //   this.lastName = data.lastName
   // }
 /////get value mathed using/////
-  postData(){
+  postData() { 
     this.yourName = this.contactForm.get("userName").value
     this.passWord = this.contactForm.get("passWord").value
     this.lastName = this.contactForm.get("lastName").value
     this.email = this.contactForm.get("email").value
     this.confirmPassword = this.contactForm.get("confirmPassword").value
   }
+
   ngOnInit(): void {
   }
 
-  setData(){
-    
+  setData() {
     this.contactForm.setValue({
     "userName": "rankit",
     "passWord": 4444444,
     "lastName": "thakur",
     "number": 98876554
-    })
-
+    });
   }
 
   patchData(){
     this.contactForm.patchValue({
     "userName": "rankit",
     "passWord": 4444444,
-    })
+    });
   }
   
-  resetData(){
-    this.contactForm.reset()
+  resetData() {
+    this.contactForm.reset();
   }
 
 }

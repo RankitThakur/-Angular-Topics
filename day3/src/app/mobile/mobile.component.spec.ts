@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustemPipeComponent } from './custem-pipe.component';
+import { MobileComponent } from './mobile.component';
 
-describe('CustemPipeComponent', () => {
-  let component: CustemPipeComponent;
-  let fixture: ComponentFixture<CustemPipeComponent>;
+describe('MobileComponent', () => {
+  let component: MobileComponent;
+  let fixture: ComponentFixture<MobileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustemPipeComponent ]
+      declarations: [ MobileComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CustemPipeComponent);
+    fixture = TestBed.createComponent(MobileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

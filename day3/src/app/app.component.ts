@@ -19,6 +19,7 @@ export class AppComponent {
   fun(data1: string){
     console.log(data1)
   }
+  
 }
 
 

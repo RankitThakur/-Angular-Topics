@@ -6,14 +6,12 @@ import { Injectable } from '@angular/core';
 export class ServiceService {
 
   constructor() { }
-    add(){
+    add() {
     alert("hello this is MynewserviceService")
   }
 
   getdata(): any {
     return ['C','C++', 'JAVA', 'Python'];
-}
+  }
 
-
-  
 }

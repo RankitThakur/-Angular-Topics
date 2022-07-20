@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-refernce.component.css']
 })
 export class TemplateRefernceComponent implements OnInit {
+  username = ""
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  username = ""
-  getName(my:any){
+  
+  getName(my: any){
    this.username = my.value
   }
 }

@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AboutComponent } from './about/about.component';
-import { AdminGuard } from './admin.guard';
-import { Admin2Guard } from './admin2.guard';
 import { ContactComponent } from './contact/contact.component';
-import { CustemPipeComponent } from './custem-pipe/custem-pipe.component';
+import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 import { PageNotefoundComponent } from './day5/page-notefound/page-notefound.component';
 import { UsersDataComponent } from './day5/users-data/users-data.component';
 import { ChildroutesComponent } from './day7/childroutes/childroutes.component';
@@ -20,11 +19,15 @@ import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component'
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ParentComponent } from './parent/parent.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
-import { RouterguardGuard } from './routerguard.guard';
 import { ObservablesComponent } from './observables/observables.component';
 import { DataResolver } from './resolver/data.resolver';
 import { UserResolver } from './resolver/user.resolver';
 import { Comp1Component } from './subjects/comp1/comp1.component';
+import { AdminGuard } from './admin.guard';
+import { Admin2Guard } from './admin2.guard';
+import { RouterguardGuard } from './routerguard.guard';
+
+
 const routes: Routes = [
   { 
     path:'',
@@ -34,69 +37,69 @@ const routes: Routes = [
   
   { 
     path:'home' , 
-    component:HomeComponent,
-    canActivate :[ RouterguardGuard ]
+    component: HomeComponent,
+    canActivate: [ RouterguardGuard ]
   },
   { 
     path:'usersdata' ,
-    component:UsersDataComponent, 
-    canDeactivate : [Admin2Guard ]
+    component: UsersDataComponent, 
+    canDeactivate: [Admin2Guard ]
   },
   {  
     path:'usersdata/:name/:useId',
-    component:UsersDataComponent
+    component: UsersDataComponent
   },
   { 
-    path:'about/:name/:useId',
-    component:AboutComponent
+    path: 'about/:name/:useId',
+    component: AboutComponent
   },
   { 
-    path:'contact', 
-    component:ContactComponent
+    path: 'contact', 
+    component: ContactComponent
   },
   // {path: 'profile', component:ProfileComponent },
   { 
     path: 'helpdesk', 
-    component:HelpdeskComponent 
+    component: HelpdeskComponent 
   },
   { 
     path: 'login', 
-    component:LoginpageComponent 
+    component: LoginpageComponent 
   },
   { 
     path: 'ByProduct', 
-    component:ParentComponent
+    component: ParentComponent
   },
   { 
     path: 'Lifecyclehook', 
-    component:LifecyclehookComponent 
+    component: LifecyclehookComponent 
   },
   { path: 'routing', 
     component: ChildroutesComponent, 
   },
   { 
     path:'viewchlid', 
-    component:ViewchildComponent,
+    component: ViewchildComponent,
   } ,
   { 
     path:'child',
-    component:ChildroutesComponent,
-    canActivateChild : [AdminGuard],
+    component: ChildroutesComponent,
+    canActivateChild: [AdminGuard],
     children: [
-      { path: 'childroute1', component:Chlidroute1Component },
-      { path:'childroute2', component: Chlidroute2Component}
-      ]
+      { path: 'childroute1', component: Chlidroute1Component },
+      { path: 'childroute2', component: Chlidroute2Component}
+    ]
   },
   {
-    path:"quaryparam/:name/:userId", 
-    component:QueryparamComponent
+    path: "quaryparam/:name/:userId", 
+    component: QueryparamComponent
   },
   {
-    path:'fragment', 
-    component:FragmentComponent
+    path: 'fragment', 
+    component: FragmentComponent
   },
   {
-    path:"myForm", 
+    path: "myForm", 
     component: TemplateformsComponent,
   },
   {
@@ -105,12 +108,12 @@ const routes: Routes = [
   },
   {
     path:'custempipe', 
-    component: CustemPipeComponent, 
+    component: CustomPipeComponent, 
   },
   {
     path: 'observables',
     component: ObservablesComponent,
-    resolve:{result:DataResolver}
+    resolve: {result: DataResolver}
   },
   {
     path: 'comp1',
@@ -118,14 +121,14 @@ const routes: Routes = [
   },
   { 
     path: '**', 
-    component:PageNotefoundComponent 
+    component: PageNotefoundComponent 
   }
 ]
 ;
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  providers: [DataResolver,UserResolver],
+  providers: [DataResolver, UserResolver],
   exports: [RouterModule],
 })
 

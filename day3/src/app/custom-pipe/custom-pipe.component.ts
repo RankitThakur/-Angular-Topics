@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CustemPipePipe } from '../custem-pipe.pipe';
+// import { CustemPipePipe } from '../custom-pipe.pipe';
 
 @Component({
-  selector: 'app-custem-pipe',
-  templateUrl: './custem-pipe.component.html',
-  styleUrls: ['./custem-pipe.component.css']
+  selector: 'app-custom-pipe',
+  templateUrl: './custom-pipe.component.html',
+  styleUrls: ['./custom-pipe.component.css']
 })
-export class CustemPipeComponent implements OnInit {
+export class CustomPipeComponent implements OnInit {
 
   constructor() { } 
   ngOnInit(): void { 

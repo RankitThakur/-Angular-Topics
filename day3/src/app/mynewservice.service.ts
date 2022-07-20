@@ -5,9 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class MynewserviceService {
   product = {name:"car"}
-  constructor() { }
+  username = "rankit";
 
-  
-username = "rankit"
+  constructor() { }
 
 }

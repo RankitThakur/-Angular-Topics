@@ -7,10 +7,10 @@
     </div><br>
     <div>
     <input type="text"  class="form-control" #add>
-    <button class = "btn btn-danger" (click) = "addpro(add)">ADD PRODUCT</button>
+    <button class = "btn btn-danger" (click)="addpro(add)">ADD PRODUCT</button>
     </div>
     <br>
-    <button class = "btn btn-danger" (click) = "onSaveProduct()">Save</button>
+    <button class = "btn btn-danger" (click)="onSaveProduct()">Save</button>
 </div>
 <table class="table">
     <thead>
@@ -24,11 +24,11 @@
     </thead>
     <tbody>
         <tr *ngFor='let student of students| filter:nameSearch'>
-            <td>{{  student.ID | uppercase  }}</td>
-            <td>{{  student.Name | custemPipe: student.Gender  }}</td>
-            <td>{{  student.DOB | date:'dd/MM/yyyy' }}</td>
-            <td>{{  student.Gender | lowercase }}</td>
-            <td>{{  student.CourseFee | currency:'USD':true }}</td>
+            <td>{{ student.ID | uppercase }}</td>
+            <td>{{ student.Name }}</td>
+            <td>{{ student.DOB | date:'dd/MM/yyyy' }}</td>
+            <td>{{ student.Gender | lowercase }}</td>
+            <td>{{ student.CourseFee | currency:'USD':true }}</td>
         </tr>
     </tbody>
 </table>

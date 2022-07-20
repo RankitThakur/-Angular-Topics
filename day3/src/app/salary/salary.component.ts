@@ -6,19 +6,22 @@ import { Component, OnInit ,HostBinding,HostListener} from '@angular/core';
   styleUrls: ['./salary.component.css']
 })
 export class SalaryComponent implements OnInit {
+  Salary: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  Salary:number = 0
-  increment(){
+
+  increment() {
     this.Salary = this.Salary+500;
   }
-  decrement(){
+
+  decrement() {
     this.Salary = this.Salary-250;
   }
-  @HostBinding('style.color') bgColor:any;
+  
+  @HostBinding('style.color') bgColor: any;
   @HostListener('mouseout') onMouseout(){
     this.bgColor = "blue"
   }

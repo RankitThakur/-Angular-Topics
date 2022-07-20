@@ -7,15 +7,15 @@ import { SubjectService } from 'src/app/service/subject.service';
   styleUrls: ['./comp3.component.css']
 })
 export class Comp3Component implements OnInit {
+  userData: any = "";
 
-  userData:any = "";
-  constructor(private user:SubjectService) { 
+  constructor(private user: SubjectService) { 
     this.user.userName.subscribe(res => {
       this.userData= res;
     })
-
   }
-  getData(id:any){
+
+  getData(id: any){
     console.log(id.value);
     this.userData = id.value;
     this.user.userName.next(id.value); 
