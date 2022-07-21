@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { HttpServiceService } from '../http-service.service';
+import { HttpServiceService } from '../services/http-service.service';
 @Component({
   selector: 'app-observables',
   templateUrl: './observables.component.html',

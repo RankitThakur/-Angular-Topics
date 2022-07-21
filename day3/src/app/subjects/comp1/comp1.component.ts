@@ -1,6 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
-import { SubjectService } from 'src/app/service/subject.service';
 
+import { SubjectService } from 'src/app/services/subject.service';
 @Component({
   selector: 'app-comp1',
   templateUrl: './comp1.component.html',

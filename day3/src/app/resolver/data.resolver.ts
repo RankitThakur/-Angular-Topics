@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpServiceService } from '../http-service.service';
+import { HttpServiceService } from '../services/http-service.service';
 import {
   Router, Resolve,
   RouterStateSnapshot,
@@ -17,7 +17,6 @@ export class DataResolver implements Resolve<boolean> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     let data2 =  this.data.students();
-
     return data2
 
   }

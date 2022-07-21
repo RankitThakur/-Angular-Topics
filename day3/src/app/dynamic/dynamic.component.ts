@@ -21,7 +21,6 @@ export class DynamicComponent implements OnInit {
     laptop: "laptop"
   }
   dummy: any = DogComponent;
-  newData: string = "Rankit"
   constructor() { }
 
   ngOnInit(): void {

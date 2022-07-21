@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from 'src/app/service/service.service';
 
+import { ServiceService } from 'src/app/services/service.service';
 @Component({
   selector: 'app-user2',
   templateUrl: './user2.component.html',

@@ -1,7 +1,7 @@
 import { Component, OnInit ,ViewChild } from '@angular/core';
 import { SalaryComponent } from '../salary/salary.component';
-import { ServiceService } from '../service/service.service';
 
+import { ServiceService } from '../services/service.service';
 
 @Component({
   selector: 'app-employee',
