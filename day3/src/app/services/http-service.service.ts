@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class HttpServiceService {
 
-  constructor(private Http:HttpClient) { }
-  student:any = [
+  constructor(private Http: HttpClient) { }
+  
+  student: any = [
     {
       ID: 'std101', 
       Name: 'Rakesh Rout',
@@ -67,17 +70,16 @@ export class HttpServiceService {
     },
   ]
   
-  students():Observable<any>{
+  students(): Observable<any>{
     return this.Http.get('https://jsonplaceholder.typicode.com/users')
   }
 
-  photo():Observable<any>{
+  photo(): Observable<any>{
     return this.Http.get('https://jsonplaceholder.typicode.com/todos')
   }
   
-  putData(  students:any = []
-    ):Observable<any>{
-
+  putData(students: any = []
+    ): Observable<any>{
     return this.Http.put('gs://userdata-bf904.appspot.com/products.Json',students )
   }
 

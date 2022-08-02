@@ -11,6 +11,7 @@ export class UsersDataComponent implements OnInit {
   userid: any = ""
   constructor(private Route: ActivatedRoute) { }
 
+
   ngOnInit(): void {
     this.Route.params.subscribe(__param =>{
       console.log(__param);

@@ -1,13 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { HttpPutAndPostdataComponent } from './http-put-and-postdata.component';
-
 describe('HttpPutAndPostdataComponent', () => {
   let component: HttpPutAndPostdataComponent;
   let fixture: ComponentFixture<HttpPutAndPostdataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, ],
       declarations: [ HttpPutAndPostdataComponent ]
     })
     .compileComponents();

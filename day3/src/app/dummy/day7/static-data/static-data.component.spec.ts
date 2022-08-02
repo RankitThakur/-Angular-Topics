@@ -1,23 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StaticDataComponent } from './static-data.component';
+// import { StaticDataComponent } from './static-data.component';
 
-describe('StaticDataComponent', () => {
-  let component: StaticDataComponent;
-  let fixture: ComponentFixture<StaticDataComponent>;
+// describe('StaticDataComponent', () => {
+//   let component: StaticDataComponent;
+//   let fixture: ComponentFixture<StaticDataComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ StaticDataComponent ]
-    })
-    .compileComponents();
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ StaticDataComponent ]
+//     })
+//     .compileComponents();
 
-    fixture = TestBed.createComponent(StaticDataComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//     fixture = TestBed.createComponent(StaticDataComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

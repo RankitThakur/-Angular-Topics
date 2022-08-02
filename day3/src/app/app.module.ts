@@ -4,6 +4,7 @@ import { RouterModule} from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS, } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -90,6 +91,8 @@ import { ServiceService } from './services/service.service';
     Comp4Component,
     FinalcompComponent, 
     AsyncPipeExampleComponent,
+  
+    
   ],
   imports: [
     BrowserModule,

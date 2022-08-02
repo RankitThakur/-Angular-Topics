@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input-perent.component.css']
 })
 export class InputPerentComponent implements OnInit {
-  child:string = "hello";
+  child:string = "rankit";
   newchlid: boolean = false;
 
   constructor() { }

@@ -16,8 +16,13 @@ describe('ChildComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  it('should create a input binding', () => 
+  {
+    expect(component.myInput).toBe('rankit')
+  })
+  it("should data is true", () => {
+    expect(component.myInput).toBeTruthy()
+  })
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
+

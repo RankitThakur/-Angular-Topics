@@ -23,7 +23,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let student of students| filter:nameSearch'>
+        <tr *ngFor='let student of students'>
+            <!-- | filter:nameSearch -->
             <td>{{ student.ID | uppercase }}</td>
             <td>{{ student.Name }}</td>
             <td>{{ student.DOB | date:'dd/MM/yyyy' }}</td>

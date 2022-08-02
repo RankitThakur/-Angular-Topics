@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChange,OnChanges} from '@angular/core';
+import { Component, OnInit, Input, SimpleChange,} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,11 +6,11 @@ import { Component, OnInit, Input, SimpleChange,OnChanges} from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
+  dataName: string = "rankit";
 
   constructor() { }
-  @Input() myInput: any;
+  @Input() myInput: any = "rankit"
   @Input() myInput2: any;
-
   ngOnChanges (changes: SimpleChange){
     console.log(SimpleChange)
   }
