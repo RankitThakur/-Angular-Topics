@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Output } from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { Component, EventEmitter, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-templateforms',
@@ -6,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./templateforms.component.css']
 })
 export class TemplateformsComponent implements OnInit {
+  @Output() loggedIn = new EventEmitter<any>();
+
+  yourName: any = "";
+  passWord: any = "";
+  lastName: any = "";
+  mobileNum: any = "";
+
 
   constructor() { }
-  yourName:any = ""
-  passWord:any = ""
-  lastName:any = ""
-
   ngOnInit(): void {
   }
   formSubmit(val:any){
@@ -19,6 +24,7 @@ export class TemplateformsComponent implements OnInit {
     this.yourName = data.yourname
     this.passWord = data.password
     this.lastName = data.lastname
+    this.mobileNum = data.number
   }
 
   

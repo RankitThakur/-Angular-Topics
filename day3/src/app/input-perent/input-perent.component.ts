@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InputPerentComponent implements OnInit {
   child:string = "rankit";
   newchlid: boolean = false;
-
+  hasEnabled: boolean = true
   constructor() { }
 
   myFunction(val: any){
@@ -19,8 +19,6 @@ export class InputPerentComponent implements OnInit {
     val = true;
     this.newchlid = val;
     }
-
   ngOnInit(): void {
   }
-
 }

@@ -6,7 +6,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./lifecyclehook.component.css']
 })
 export class LifecyclehookComponent implements OnInit, OnChanges {
-  @Input() name:any = "";
+  name: string = 'Test';
 
   constructor() {
     console.log("constructor") ;
@@ -14,14 +14,26 @@ export class LifecyclehookComponent implements OnInit, OnChanges {
   
   ngOnInit(): void {
     console.log(" Call ngoninit");
+    console.log("Name is", this.name);
   }
   
   ngOnChanges(changes: SimpleChanges): void {
     console.log("changes");
+    if(changes['username']){
+      this.name = "rankit:" + this.name + 'rANKIT'
+    }
   }
 
   ngDoCheck(){
     console.log("calll ng Do Checks");
+  }
+
+  ngAfterViewChecked(){
+    console.log("ngAfterViewCheck");
+  }
+
+  submitCompanyName() {
+  this.name = "App"
   }
 
   ngAfterContentInit(){
@@ -34,10 +46,6 @@ export class LifecyclehookComponent implements OnInit, OnChanges {
 
   ngAfterViewInit(){
     console.log("ngAfterViewInit");
-  }
-
-  ngAfterViewChecked(){
-    console.log("ngAfterViewCheck");
   }
   
   ngOndistroy(){

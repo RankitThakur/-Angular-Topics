@@ -6,21 +6,43 @@
     <h1 class="box">Contact Form</h1>
     <div class="box"> 
         <div class = "col-md-6">
-            <form #contactForm = "ngForm" class = "form" (ngSubmit)="formSubmit(contactForm);contactForm.reset()" >
+            <form #contactForm = "ngForm" class = "form" (ngSubmit)="formSubmit(contactForm);contactForm.reset()"> 
                 <div class = "form-group" >
-                    <input type="text" minlength="3" maxlength="10" name="yourname"  placeholder="Enter your name" class = "form-control" required ngModel #yourname = "ngModel">
-                    <span class = "error" *ngIf = "yourname.invalid && yourname.touched">Enter your name</span>
+                    <input type="text" 
+                        minlength="3" 
+                        maxlength="10" 
+                        name="yourname"  
+                        placeholder="Enter your name" class = "form-control" 
+                        [(ngModel)]="yourName"
+                        #fullName = "ngModel" >
+                    <span class = "error" *ngIf = "fullName.invalid && fullName.touched">Enter your name</span>
                 </div><br>
                 <div class = "form-group">
-                    <input type="email" name="lastname" placeholder="lastname" class = "form-control" required ngModel #lastname = "ngModel">
+                    <input type="email" 
+                        name="lastname" placeholder="lastname" 
+                        class = "form-control" 
+                        required 
+                        ngModel
+                        #lastname = "ngModel" >
                     <span class = "error" *ngIf = "lastname.invalid && lastname.touched">Enter your Lastname</span>
                 </div><br>
                 <div class = "form-group">
-                    <input type="password" name="password" placeholder="Enter Your Password" class = "form-control" required ngModel #password = "ngModel">
+                    <input type="password"      name="password" 
+                    placeholder="Enter Your Password" class = "form-control" 
+                    required 
+                    ngModel
+                    #password = "ngModel">
                     <span class = "error" *ngIf = "password.invalid && password.touched">Enter your Password</span>
                 </div><br>
                 <div class = "form-group">
-                    <input type="number" minlength="10" maxlength="13" name="number" placeholder="Enter Your Number" class = "form-control" required ngModel #number = "ngModel">
+                    <input type="number"        
+                    minlength="10"     
+                    maxlength="13" 
+                    name="number" 
+                    placeholder="Enter Your Number" class = "form-control" 
+                    required 
+                    ngModel
+                        #number = "ngModel">
                     <span class = "error" *ngIf = "number.invalid && number.touched">Enter your Number</span>
                 </div><br>
                 <div class="form-group col-md-4">
@@ -34,7 +56,7 @@
                     </select>
                  </div>   
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" ngModel>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" ngModel name="checkbox">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div><br>
                 <div class = "form-group">

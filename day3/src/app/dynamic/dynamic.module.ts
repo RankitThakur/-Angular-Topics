@@ -6,7 +6,6 @@ import { ComputerComponent } from '../computer/computer.component';
 import { CatComponent } from '../dummy/cat/cat.component';
 import { CowComponent } from '../dummy/cow/cow.component';
 import { DogComponent } from '../dummy/dog/dog.component';
-import { LaptopComponent } from '../laptop/laptop.component';
 import { MobileComponent } from '../mobile/mobile.component';
 import { DynamicComponent } from './dynamic.component';
 
@@ -18,7 +17,6 @@ const route: Routes = [
 @NgModule({
   declarations: [
     DynamicComponent,
-    LaptopComponent,
     ComputerComponent,
     MobileComponent,
     DogComponent,

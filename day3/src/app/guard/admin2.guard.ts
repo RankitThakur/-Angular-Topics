@@ -12,12 +12,14 @@ export class Admin2Guard implements CanDeactivate<unknown>, CanLoad {
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       let data = confirm("you remove this page ")
+      debugger
     return data;
   }
 
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+      debugger
     return true;
   }
 }

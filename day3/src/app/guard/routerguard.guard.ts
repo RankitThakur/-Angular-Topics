@@ -10,7 +10,6 @@ export class RouterguardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return (confirm("you login"));
-      
   }
   
 }

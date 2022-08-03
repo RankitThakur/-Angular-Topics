@@ -50,6 +50,8 @@ import { HttpErrorInterceptor } from './interceptor/http-error.interceptor';
 import { NewDirective } from './new.directive';
 import { HttpServiceService } from './services/http-service.service';
 import { ServiceService } from './services/service.service';
+import { HeaderComponent } from './header/header.component';
+import { InputOutputComponent } from './input-output/input-output.component';
 
 
 
@@ -90,7 +92,7 @@ import { ServiceService } from './services/service.service';
     Comp3Component,
     Comp4Component,
     FinalcompComponent, 
-    AsyncPipeExampleComponent,
+    AsyncPipeExampleComponent, HeaderComponent, InputOutputComponent,
   
     
   ],

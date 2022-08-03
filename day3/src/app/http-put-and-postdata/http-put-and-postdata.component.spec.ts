@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FillterPipe } from '../fillter.pipe';
 
 import { HttpPutAndPostdataComponent } from './http-put-and-postdata.component';
 describe('HttpPutAndPostdataComponent', () => {

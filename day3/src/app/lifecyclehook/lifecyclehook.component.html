@@ -1,6 +1,7 @@
 <p>lifecyclehook works!</p>
-<input type="" name="company">
+<input type="" name="company" [(ngModel)]="name">
+<h1 id =oninit>{{name}}</h1>
 <ng-content></ng-content>
-<button>submit</button>
+<button (click)="submitCompanyName()">submit</button>
 
 <p>{{name}}</p>
