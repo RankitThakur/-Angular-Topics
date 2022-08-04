@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-template-refernce',
-  templateUrl: './template-refernce.component.html',
-  styleUrls: ['./template-refernce.component.css']
-})
-export class TemplateRefernceComponent implements OnInit {
-  username = ""
+// @Component({
+//   selector: 'app-template-refernce',
+//   templateUrl: './template-refernce.component.html',
+//   styleUrls: ['./template-refernce.component.css']
+// })
+// export class TemplateRefernceComponent implements OnInit {
+//   username = ""
 
-  constructor() { }
+//   constructor() { }
 
-  ngOnInit(): void {
-  }
+//   ngOnInit(): void {
+//   }
   
-  getName(my: any){
-   this.username = my.value
-  }
-}
+//   getName(my: any){
+//    this.username = my.value
+//   }
+// }

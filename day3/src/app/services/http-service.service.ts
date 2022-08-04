@@ -3,14 +3,11 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class HttpServiceService {
 
-  constructor(private Http: HttpClient) { }
-  
   student: any = [
     {
       ID: 'std101', 
@@ -69,6 +66,8 @@ export class HttpServiceService {
       CourseFee: 1234
     },
   ]
+  constructor(private Http: HttpClient) { }
+  
   
   students(): Observable<any>{
     return this.Http.get('https://jsonplaceholder.typicode.com/users')

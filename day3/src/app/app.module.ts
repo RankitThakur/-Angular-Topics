@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
-import { TemplateRefernceComponent } from './template-refernce/template-refernce.component';
 import { HelpdeskComponent } from './helpdesk/helpdesk.component';
 import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
@@ -59,7 +58,6 @@ import { InputOutputComponent } from './input-output/input-output.component';
   declarations: [
     AppComponent,
     LifecyclehookComponent,
-    TemplateRefernceComponent,
     HelpdeskComponent,
     CardComponent,
     ParentComponent,
@@ -93,8 +91,6 @@ import { InputOutputComponent } from './input-output/input-output.component';
     Comp4Component,
     FinalcompComponent, 
     AsyncPipeExampleComponent, HeaderComponent, InputOutputComponent,
-  
-    
   ],
   imports: [
     BrowserModule,
@@ -104,7 +100,6 @@ import { InputOutputComponent } from './input-output/input-output.component';
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
-
   ],
   providers: [
     RouterguardGuard,
